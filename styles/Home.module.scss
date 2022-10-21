@@ -1,0 +1,289 @@
+$background: var(--background);
+$width: 730px;
+$foreground: var(--foreground);
+$logo: var(--color-logo);
+$text: var(--color-text);
+$heading: var(--color-heading);
+$search: var(--color-search);
+$icon: var(--color-icon);
+.main {
+  background-color: var(--background);
+  font-family: "space-mono", mono;
+}
+.navbar-brand {
+  color: $logo !important;
+}
+.modes {
+  filter: $icon;
+}
+.header {
+  margin-top: 144px;
+  width: 100%;
+  background-color: $background !important;
+  height: 38px;
+  margin-bottom: 36px;
+}
+
+.devfinder {
+  padding: 0;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+  color: $logo;
+  margin-left: 0;
+}
+
+.lightMode {
+  width: 90px;
+  height: 20px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin-right: 0;
+  cursor: pointer;
+  p {
+    margin-bottom: 0;
+  }
+  gap: 16px;
+  color: $text;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  text-align: right;
+  letter-spacing: 2.5px;
+}
+
+.mainSearchBar {
+  margin-bottom: 24px;
+  border-radius: 15px !important;
+  display: flex;
+  justify-content: space-between;
+  border: $foreground !important;
+}
+
+.searchBar {
+  border: $foreground !important;
+  border-radius: 15px !important;
+  display: flex;
+  justify-content: space-between;
+  height: 69px;
+  flex-direction: row !important;
+  align-items: center;
+  padding-left: 32px;
+  padding-right: 10px;
+  background-color: $foreground;
+  border-bottom: none;
+  width: 100% !important;
+
+  .searchIcon {
+    align-self: flex-start !important;
+  }
+
+  .iconInput {
+    display: flex;
+    flex-direction: row;
+    gap: 23.94px;
+    width: fit-content;
+
+    .input {
+      height: 25px;
+      min-width: 300px !important;
+      margin-right: 0 !important;
+      color: $text;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+    }
+    .input::placeholder {
+      color: $text;
+    }
+  }
+
+  .searchBtn {
+    height: 50px;
+  }
+  .notFound {
+    p {
+      margin-bottom: 0;
+      color: #f74646;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 22px;
+      margin-right: 24px;
+    }
+  }
+}
+
+.mainCard {
+  display: grid !important;
+  grid-template-areas:
+    "image headinfo time "
+    "image body body ";
+  grid-template-columns: repeat(auto-fit);
+  padding-left: 57px;
+  padding-right: 39px;
+  padding-top: 44px;
+  width: 900px;
+  .avatarContainer {
+    grid-area: "image";
+    .avatar {
+      border-radius: 50%;
+      overflow: "hidden";
+    }
+  }
+
+  .mainHeader {
+    background-color: $foreground;
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .bioInfo {
+    margin-left: 37px;
+    grid-area: headinfo;
+
+    .bigName {
+      margin-bottom: 2px;
+      color: $text;
+      height: 39px;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 39px;
+    }
+
+    .smName {
+      height: 24px;
+      font-family: "Space Mono";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px !important;
+      color: #0079ff;
+      margin-bottom: 20px;
+    }
+
+    .bio {
+      color: $text;
+      opacity: 0.9;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 25px;
+      max-width: 500px;
+    }
+  }
+
+  .joinTime {
+    grid-area: time;
+    text-align: right;
+    color: $text;
+  }
+
+  .infoBody {
+    grid-area: body;
+    margin-left: 37px;
+    .infoColored {
+      width: 100%;
+      height: 85px;
+      background-color: $background;
+      padding: 15px 50px 17px 32px;
+      .subInfo {
+        display: flex;
+        justify-content: space-around;
+        text-align: left !important;
+        p {
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 19px;
+          color: $text;
+          margin-bottom: 1px;
+        }
+        h2 {
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 33px;
+          text-transform: uppercase;
+          color: $text;
+          height: 33px;
+        }
+      }
+    }
+    .iconMainBox {
+      display: grid;
+      grid-template-areas:
+        "location twitter"
+        "blog company";
+      grid-template-columns: 350px 1fr;
+      margin-top: 37px;
+      .iconBox {
+        display: grid;
+        text-align: center;
+        position: relative;
+        grid-template-areas: "icon text";
+        grid-template-columns: auto 1fr;
+        .subIcon {
+          grid-area: icon;
+          filter: $icon;
+        }
+        a {
+          grid-area: text;
+          margin: 0;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 22px;
+          text-align: left;
+          margin-left: 16px;
+          color: $text;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        p {
+          grid-area: text;
+          margin: 0;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 22px;
+          text-align: left;
+          margin-left: 16px;
+          color: $text;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        p:hover {
+          overflow: visible;
+        }
+      }
+      .location {
+        margin-bottom: 19px;
+      }
+      .twitter {
+        margin-bottom: 19px;
+      }
+      .blog {
+        margin-bottom: 48px;
+      }
+      .company {
+        margin-bottom: 48px;
+      }
+    }
+  }
+}
+
+.mainCard {
+  border-radius: 15px !important;
+  background-color: $foreground;
+  border-color: $foreground !important;
+}
+.card {
+  border-color: $foreground !important;
+}
+.border-light {
+  border-color: $foreground !important;
+}

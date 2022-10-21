@@ -1,0 +1,82 @@
+html {
+  background-color: var(--background);
+}
+$background: var(--background);
+$width: 730px;
+$foreground: var(--foreground);
+$logo: var(--color-logo);
+$text: var(--color-text);
+$heading: var(--color-heading);
+$search: var(--color-search);
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--background) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#__next {
+  background-color: var(--background);
+  height: 1000px;
+}
+* {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.mainCard {
+  border-radius: 15px !important;
+  background-color: $foreground;
+  border-color: $foreground !important;
+}
+
+.card {
+  border-color: $foreground !important;
+  background-color: $foreground;
+}
+.border-light {
+  border-color: $foreground !important;
+}
+
+:root {
+  --background: #f6f8ff;
+  --foreground: #fefefe;
+  --color-logo: #222731;
+  --color-text: #4b6a9b;
+  --color-icon: ;
+  --color-heading: #2b3442;
+  --color-search: #ffffff;
+}
+
+[data-theme="dark"] {
+  --background: #141d2f;
+  --foreground: #1e2a47;
+  --color-logo: #ffffff;
+  --color-icon: brightness(0) invert(1);
+  --color-text: #ffffff;
+  --color-heading: #ffffff;
+  --color-search: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: var(--background);
+    background: black;
+  }
+}
