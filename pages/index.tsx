@@ -45,8 +45,8 @@ const Home: React.FC = (props: Record<string, string>) => {
 	const { theme, setTheme } = useTheme();
 	const [light, setLight] = useState(false);
 	const handleDarkMode = () => {
-		setTheme(light ? 'light' : 'dark');
 		setLight(!light);
+		setTheme(light ? 'dark' : 'light');
 	};
 	const getData = async () => {
 		try {
@@ -159,21 +159,21 @@ const Home: React.FC = (props: Record<string, string>) => {
 							onClick={handleDarkMode}>
 							{light ? (
 								<>
-									<p>DARK</p>
-									<span>
-										<Image
-											className={styles.modes}
-											src={Sun}
-										/>
-									</span>
-								</>
-							) : (
-								<>
 									<p>LIGHT</p>
 									<span>
 										<Image
 											className={styles.modes}
 											src={Moon}
+										/>
+									</span>
+								</>
+							) : (
+								<>
+									<p>DARK</p>
+									<span>
+										<Image
+											className={styles.modes}
+											src={Sun}
 										/>
 									</span>
 								</>

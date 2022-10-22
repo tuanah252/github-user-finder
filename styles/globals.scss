@@ -45,7 +45,7 @@ p {
 
 .card {
   border-color: $foreground !important;
-  background-color: $foreground;
+  background-color: $foreground !important;
 }
 .border-light {
   border-color: $foreground !important;
