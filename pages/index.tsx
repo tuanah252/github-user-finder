@@ -51,7 +51,6 @@ const Home: React.FC = (props: Record<string, string>) => {
 	const getData = async () => {
 		try {
 			let res = await axios.get(`https://api.github.com/users/${name}`);
-			console.log('>>>>>', res);
 			setImage(res.data.avatar_url);
 			setAvaName(res.data.login);
 			setBio(res.data.bio);
